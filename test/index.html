@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>playground</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="footer" test-attr="hehe">
+            <p id="test">♥ from the Yeoman team</p>
+        </div>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        <ul>
+
+        <form>
+            <input id="a-input" type="number" value="10" />
+        </form>
+    </body>
+
+    <script src="../public/awisp.min.js"></script>
+    <script type="text/javascript">
+        var $d = $(function(d){
+            console.log($d);
+
+            console.log($('p'));
+            console.log($('.footer'));
+            console.log($('#test'));
+
+            $('.footer').hide();
+
+            setTimeout(function(){
+                $('.footer').show();
+                $('.footer').attr('sdfsd', 'ssss');
+                $('#a-input').val(2000);
+                console.log($('li').get());
+                $('.footer').removeAttr('test-attr');
+            }, 1000);
+
+            $('li').each(function(index, $e){
+                console.log($e);
+                $e.innerText = index;
+            });
+
+            console.log($('li').size());
+            $('li').last().remove();
+            console.log($('li').size());
+
+            $('li').last().css("color", "red");
+        })
+    </script>
+
+</html>
